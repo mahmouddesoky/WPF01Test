@@ -1,0 +1,229 @@
+﻿<Page x:Class="WpfApp1.quotation_products_info"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1200"
+      Title="quotation_products_info">
+
+    <Grid VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        <Grid Height="100" Background="#105A97" Grid.Row="0">
+            <Label Style="{StaticResource AppHeaderStyle}"  Content="PRODUCTS INFO" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <Border Style="{StaticResource ClosedTap}" Grid.Column="0">
+                <Label Style="{StaticResource ClosedTapLabel}" Content="Basic Info"/>
+            </Border>
+            <Border Style="{StaticResource OpenTap}" Grid.Column="1">
+                <Label Style="{StaticResource OpenTapLabel}" Content="Products Info" />
+
+            </Border>
+            <Border Style="{StaticResource ClosedTap}" Grid.Column="2">
+                <Label Style="{StaticResource ClosedTapLabel}" Content="Payment and Delivery" />
+
+            </Border>
+            <Border Style="{StaticResource ClosedTap}" Grid.Column="3">
+                <Label Style="{StaticResource ClosedTapLabel}" Content="Additional Info" />
+
+            </Border>
+            <Border Style="{StaticResource ClosedTap}" Grid.Column="4">
+                <Label Style="{StaticResource ClosedTapLabel}" Content="Upload Files"/>
+            </Border>
+        </Grid>
+        <Grid VerticalAlignment="Stretch" Grid.Row="2">
+
+
+            <ScrollViewer Margin="0,0,0,90">
+                <Grid >
+                    <WrapPanel>
+                        <WrapPanel>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                </Grid.RowDefinitions>
+                                <Border Grid.Column="0" VerticalAlignment="Bottom" Margin="20,0,0,0" Background="#105A97" Width="550">
+
+                                    <Label Style="{StaticResource InnerHeader}" Content="Product 1" HorizontalAlignment="Center"/>
+
+                                </Border>
+                                <CheckBox Margin="220,18,0,0" x:Name="product1CheckBox"></CheckBox>
+                                <WrapPanel Grid.Row="1">
+                                    <Label Style="{StaticResource Labels}" Content="Type"/>
+                                    <ComboBox Style="{StaticResource ComboBoxes}" x:Name="typeComboBox" SelectionChanged="OnSelChangedTypeComboBox"/>
+                                </WrapPanel>
+                                <WrapPanel Grid.Row="2">
+                                    <Label Style="{StaticResource Labels}" Content="Brand"/>
+                                    <ComboBox Style="{StaticResource ComboBoxes}" x:Name="brandComboBox" SelectionChanged="OnSelChangedBrandComboBox"/>
+                                </WrapPanel>
+                                <WrapPanel Grid.Row="3">
+                                    <Label Style="{StaticResource Labels}" Content="Model"/>
+                                    <ComboBox Style="{StaticResource ComboBoxes}" x:Name="modelComboBox" SelectionChanged="OnSelChangedModelComboBox"/>
+                                </WrapPanel>
+                                <WrapPanel Grid.Row="4">
+                                    <Label Style="{StaticResource Labels}" Content="Quantity"/>
+                                    <TextBox Style="{StaticResource ComboBoxes}" x:Name="quantityTextBox" />
+                                </WrapPanel>
+                                <WrapPanel Grid.Row="5">
+                                    <Label Style="{StaticResource Labels}" Content="Price"/>
+                                    <TextBox Style="{StaticResource ComboBoxes}" Width="150" x:Name="priceTextBox"/>
+                                    <ComboBox Style="{StaticResource ComboBoxes}" Width="150" Margin="33,18,0,0" x:Name="priceComboBox"/>
+                                </WrapPanel>
+                            </Grid>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                </Grid.RowDefinitions>
+                                <Border Grid.Column="0" VerticalAlignment="Bottom" Margin="20,0,0,0" Background="#105A97" Width="550">
+                                    <Label Style="{StaticResource InnerHeader}" Content="Product 2" HorizontalAlignment="Center"/>
+
+                                </Border>
+                                <CheckBox Margin="220,18,0,0" x:Name="product2CeckBox" Click="OnCheckProduct2CheckBox"></CheckBox>
+                               
+                                <WrapPanel Grid.Row="1">
+                                    <Label Style="{StaticResource Labels}" Content="Type"/>
+                                    <ComboBox Style="{StaticResource ComboBoxes}" x:Name="typeComboBoxPrdoduct2" SelectionChanged="OnSelChangedTypeComboBocProduct2"/>
+                                </WrapPanel>
+                                <WrapPanel Grid.Row="2">
+                                    <Label Style="{StaticResource Labels}" Content="Brand"/>
+                                    <ComboBox Style="{StaticResource ComboBoxes}" x:Name="brandComboBoxProduct2" SelectionChanged="OnSelChangedBrandComboBoxProduct2"/>
+                                </WrapPanel>
+                                <WrapPanel Grid.Row="3">
+                                    <Label Style="{StaticResource Labels}" Content="Model"/>
+                                    <ComboBox Style="{StaticResource ComboBoxes}" x:Name="modelComboBoxPrduct2" SelectionChanged="OnSelChangedModelComboBoxProduct2"/>
+                                </WrapPanel>
+                                <WrapPanel Grid.Row="4">
+                                    <Label Style="{StaticResource Labels}" Content="Quantity"/>
+                                    <TextBox Style="{StaticResource ComboBoxes}" x:Name="quantityTextBoxProduct2"/>
+                                </WrapPanel>
+                                <WrapPanel Grid.Row="5">
+                                    <Label Style="{StaticResource Labels}" Content="Price"/>
+                                    <TextBox Style="{StaticResource ComboBoxes}" Width="150" x:Name="priceTextBox2"/>
+                                    <ComboBox Style="{StaticResource ComboBoxes}" Width="150" Margin="33,18,0,0" x:Name="priceComboBox2" />
+                                </WrapPanel>
+                            </Grid>
+
+                        </WrapPanel>
+                        <WrapPanel>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                </Grid.RowDefinitions>
+                                <Border Grid.Column="0" VerticalAlignment="Bottom" Margin="20,0,0,0" Background="#105A97" Width="550">
+                                    <Label Style="{StaticResource InnerHeader}" Content="Product 3" HorizontalAlignment="Center"/>
+
+                                </Border>
+                                <CheckBox Margin="220,18,0,0" x:Name="Product3CheckBox" Click="OnCheckProduct3CheckBox"></CheckBox>
+                                <WrapPanel Grid.Row="1">
+                                    <Label Style="{StaticResource Labels}" Content="Type"/>
+                                    <ComboBox Style="{StaticResource ComboBoxes}" x:Name="typeComboBoxProduct3" SelectionChanged="OnSelChangedTypeComboBoxProduct3" />
+                                </WrapPanel>
+                                <WrapPanel Grid.Row="2">
+                                    <Label Style="{StaticResource Labels}" Content="Brand"/>
+                                    <ComboBox Style="{StaticResource ComboBoxes}" x:Name="brandComboBoxProduct3" SelectionChanged="OnSelChangedBrandComboBoxProduct3"/>
+                                </WrapPanel>
+                                <WrapPanel Grid.Row="3">
+                                    <Label Style="{StaticResource Labels}" Content="Model"/>
+                                    <ComboBox Style="{StaticResource ComboBoxes}" x:Name="modelComboBoxProduct3" SelectionChanged="OnSelChangedModelComboBoxProduct3"/>
+                                </WrapPanel>
+                                <WrapPanel Grid.Row="4">
+                                    <Label Style="{StaticResource Labels}" Content="Quantity"/>
+                                    <TextBox Style="{StaticResource ComboBoxes}" x:Name="quantityTextBoxProduct3" />
+                                </WrapPanel>
+                                <WrapPanel Grid.Row="5">
+                                    <Label Style="{StaticResource Labels}" Content="Price"/>
+                                    <TextBox Style="{StaticResource ComboBoxes}" Width="150" x:Name="priceTextBox3"/>
+                                    <ComboBox Style="{StaticResource ComboBoxes}" Width="150" Margin="33,18,0,0" x:Name="priceComboBox3" />
+                                </WrapPanel>
+                            </Grid>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                </Grid.RowDefinitions>
+                                <Border Grid.Column="0" VerticalAlignment="Bottom" Margin="20,0,0,0" Background="#105A97" Width="550">
+                                    <Label Style="{StaticResource InnerHeader}" Content="Product 4" HorizontalAlignment="Center"/>
+
+                                </Border>
+                                <CheckBox Margin="220,18,0,0" x:Name="product4CheckBox" Click="OnCheckProduct4CheckBox" ></CheckBox>
+                                
+                                <WrapPanel Grid.Row="1">
+                                    <Label Style="{StaticResource Labels}" Content="Type"/>
+                                    <ComboBox Style="{StaticResource ComboBoxes}" x:Name="typeComboBoxProduct4" SelectionChanged="OnSelChangedTypeComboBoxProduct4"/>
+                                </WrapPanel>
+                                <WrapPanel Grid.Row="2">
+                                    <Label Style="{StaticResource Labels}" Content="Brand"/>
+                                    <ComboBox Style="{StaticResource ComboBoxes}" x:Name="brandComboBoxProduct4" SelectionChanged="OnSelChangedBrandComboBoxProduct4"/>
+                                </WrapPanel>
+                                <WrapPanel Grid.Row="3">
+                                    <Label Style="{StaticResource Labels}" Content="Model"/>
+                                    <ComboBox Style="{StaticResource ComboBoxes}" x:Name="modelComboBoxProduct4" SelectionChanged="OnSelChangedModelComboBoxProduct4"/>
+                                </WrapPanel>
+                                <WrapPanel Grid.Row="4">
+                                    <Label Style="{StaticResource Labels}" Content="Quantity"/>
+                                    <TextBox Style="{StaticResource ComboBoxes}" x:Name="quantityTextBoxProduct4"/>
+                                </WrapPanel>
+                                <WrapPanel Grid.Row="5">
+                                    <Label Style="{StaticResource Labels}" Content="Price"/>
+                                    <TextBox Style="{StaticResource ComboBoxes}" Width="150" x:Name="priceTextBox4"/>
+                                    <ComboBox Style="{StaticResource ComboBoxes}" Width="150" Margin="33,18,0,0" x:Name="priceComboBox4"/>
+                                </WrapPanel>
+                            </Grid>
+
+
+                        </WrapPanel>
+                    </WrapPanel>
+                </Grid>
+            </ScrollViewer>
+            <Grid Margin="0,400,0,0" VerticalAlignment="Bottom">
+                <WrapPanel Width="450">
+
+                </WrapPanel>
+                <WrapPanel Width="850" Margin="0,0,0,20">
+                    <Button Style="{StaticResource Buttons}" Content="Back"  Click="OnBtnClickBack"/>
+                    <Button Style="{StaticResource Buttons}" Content="Next" Click="OnBtnClickNext" />
+                    <Button Style="{StaticResource Buttons}" Content="Finish" />
+                    <Button Style="{StaticResource Buttons}" Content="Cancel" />
+                </WrapPanel>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Page>

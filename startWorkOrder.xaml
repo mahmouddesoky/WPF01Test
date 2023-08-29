@@ -1,0 +1,86 @@
+﻿<Page x:Class="WpfApp1.startWorkOrder"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="1000"
+      Title="startWorkOrder">
+
+    <Grid MinWidth="1000">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Background="#105A97" >
+            <Label Content="Work Orders" Style="{StaticResource OpenTapLabel2}"/>
+            <Label Content="Quotations" Style="{StaticResource ClosedTapLabel2}"/>
+            <Label Content="RFQs" Style="{StaticResource ClosedTapLabel2}"/>
+
+        </StackPanel>
+        <Grid Grid.Column="1" Background="#E6E6E3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="340"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Work Orders" Style="{StaticResource Header}" Grid.Row="0"/>
+            <WrapPanel Grid.Row="1">
+                <CheckBox Content="Search" Style="{StaticResource checkbox}"/>
+                <TextBox Style="{StaticResource ComboBoxe}"/>
+            </WrapPanel>
+            <WrapPanel Grid.Row="2">
+                <CheckBox Content="Year" Style="{StaticResource checkbox}"/>
+                <ComboBox Style="{StaticResource ComboBoxe}"/>
+            </WrapPanel>
+            <WrapPanel Grid.Row="3">
+                <CheckBox Content="Quarter" Style="{StaticResource checkbox}"/>
+                <ComboBox Style="{StaticResource ComboBoxe}"/>
+            </WrapPanel>
+            <WrapPanel Grid.Row="4">
+                <CheckBox Content="Sales Person" Style="{StaticResource checkbox}"/>
+                <ComboBox Style="{StaticResource ComboBoxe}"/>
+            </WrapPanel>
+            <WrapPanel Grid.Row="5">
+                <CheckBox Content="Pre-Sales Engineer" Style="{StaticResource checkbox}"/>
+                <ComboBox Style="{StaticResource ComboBoxe}"/>
+            </WrapPanel>
+            <WrapPanel Grid.Row="6">
+                <CheckBox Content="Product" Style="{StaticResource checkbox}"/>
+                <ComboBox Style="{StaticResource ComboBoxe}"/>
+            </WrapPanel>
+            <WrapPanel Grid.Row="7">
+                <CheckBox Content="Brand" Style="{StaticResource checkbox}"/>
+                <ComboBox Style="{StaticResource ComboBoxe}"/>
+            </WrapPanel>
+            <WrapPanel Grid.Row="8">
+                <CheckBox Content="Contact Type" Style="{StaticResource checkbox}"/>
+                <ComboBox Style="{StaticResource ComboBoxe}"/>
+            </WrapPanel>
+            <WrapPanel Grid.Row="9">
+                <CheckBox Content="Status" Style="{StaticResource checkbox}"/>
+                <ComboBox Style="{StaticResource ComboBoxe}"/>
+            </WrapPanel>
+            <ScrollViewer Grid.Row="1" Grid.Column="2" Grid.RowSpan="9" Margin="0,0,10,0">
+                <StackPanel  Style="{StaticResource grid}" >
+
+                </StackPanel>
+            </ScrollViewer>
+
+            <Button Content="ADD" Style="{StaticResource Button}" Grid.Row="10" Click="OnBtnClickAdd"/>
+        </Grid>
+    </Grid>
+</Page>

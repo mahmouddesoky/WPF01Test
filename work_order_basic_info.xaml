@@ -1,0 +1,99 @@
+﻿<Page x:Class="WpfApp1.work_order_basic_info"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1500"
+      Title="work_order_basic_info">
+
+    <Grid VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+
+        </Grid.RowDefinitions>
+        <Grid Height="100" Background="#105A97" Grid.Row="0">
+            <Label Style="{StaticResource AppHeaderStyle}"  Content="BASIC INFO" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <Border Style="{StaticResource OpenTap}" Grid.Column="0">
+                <Label Style="{StaticResource OpenTapLabel}" Content="Basic Info"/>
+            </Border>
+            <Border Style="{StaticResource ClosedTap}" Grid.Column="1">
+                <Label Style="{StaticResource ClosedTapLabel}" Content="Projects Info" />
+
+            </Border>
+            <Border Style="{StaticResource ClosedTap}" Grid.Column="2">
+                <Label Style="{StaticResource ClosedTapLabel}" Content="Products Info" />
+
+            </Border>
+            <Border Style="{StaticResource ClosedTap}" Grid.Column="3">
+                <Label Style="{StaticResource ClosedTapLabel}" Content="Payment and Delivery" />
+
+            </Border>
+            <Border Style="{StaticResource ClosedTap}" Grid.Column="4">
+                <Label Style="{StaticResource ClosedTapLabel}" Content="Additional Info"/>
+            </Border>
+            <Border Style="{StaticResource ClosedTap}" Grid.Column="5">
+                <Label Style="{StaticResource ClosedTapLabel}" Content="Upload File"/>
+            </Border>
+        </Grid>
+        <ScrollViewer Grid.Row="2">
+
+            <Grid >
+                <WrapPanel>
+                    <WrapPanel Height="80" Width="600">
+                        <Label Style="{StaticResource Labels}" Content="Sales Person"/>
+                        <ComboBox Style="{StaticResource ComboBoxes}" x:Name="salesPersonComboBox" SelectionChanged="OnSelChangedSalesPersonComboBox" />
+                    </WrapPanel>
+                    <WrapPanel  Height="70" Width="600" >
+                        <CheckBox HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0" x:Name="quotationIDCheckBox" Click="OnCheckQuotationIDCheckBox"/>
+                        <Label Style="{StaticResource Labels}" Content="Quotation ID"  Margin="0,18,0,0" />
+                        <ComboBox Style="{StaticResource ComboBoxes}"  Margin="0,18,0,0" x:Name="quotationIDComboBox" SelectionChanged="OnSelChangedQuotationIDComboBox"/>
+                    </WrapPanel>
+                    <WrapPanel Height="80" Width="600" Grid.Row="0">
+                        <Label Style="{StaticResource Labels}" Content="Company Name"/>
+                        <ComboBox Style="{StaticResource ComboBoxes}" x:Name="companyNameComboBox" />
+                    </WrapPanel>
+                    <WrapPanel Height="80" Width="600" Grid.Row="0">
+                        <Label Style="{StaticResource Labels}" Content="Company Address"/>
+                        <ComboBox Style="{StaticResource ComboBoxes}" x:Name="companyAddressComboBox" />
+                    </WrapPanel>
+                    <WrapPanel Height="80" Width="600" Grid.Row="0">
+                        <Label Style="{StaticResource Labels}" Content="Contact Person"/>
+                        <ComboBox Style="{StaticResource ComboBoxes}" x:Name="contactPersonComboBox" />
+                    </WrapPanel>
+                    <WrapPanel Height="80" Width="600" Grid.Row="0">
+                        <Label Style="{StaticResource Labels}" Content="Issue Date"/>
+                        <DatePicker Style="{StaticResource ComboBoxes}" x:Name="issueDateDatePicker"></DatePicker>
+                    </WrapPanel>
+                </WrapPanel>
+            </Grid>
+            
+        </ScrollViewer>
+        <WrapPanel Grid.Row="3" >
+            <WrapPanel Width="350">
+
+            </WrapPanel>
+            <WrapPanel Width="850" Margin="0,15,0,0">
+                <Button Style="{StaticResource Buttons}" Content="Back"  />
+                <Button Style="{StaticResource Buttons}" Content="Next"  />
+                <Button Style="{StaticResource Buttons}" Content="Finish"  />
+                <Button Style="{StaticResource Buttons}" Content="Cancel"  />
+            </WrapPanel>
+
+        </WrapPanel>
+    </Grid>
+</Page>

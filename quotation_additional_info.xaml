@@ -1,0 +1,97 @@
+﻿<Page x:Class="WpfApp1.quotation_additional_info"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1200"
+      Title="quotation_additional_info">
+
+    <Grid VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="80"/>
+
+
+        </Grid.RowDefinitions>
+        <Grid Height="100" Background="#105A97" Grid.Row="0">
+            <Label Style="{StaticResource AppHeaderStyle}"  Content="ADDITIONAL INFO" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <Border Style="{StaticResource ClosedTap}" Grid.Column="0">
+                <Label Style="{StaticResource ClosedTapLabel}" Content="Basic Info"/>
+            </Border>
+            <Border Style="{StaticResource ClosedTap}" Grid.Column="1">
+                <Label Style="{StaticResource ClosedTapLabel}" Content="Products Info" />
+
+            </Border>
+            <Border Style="{StaticResource ClosedTap}" Grid.Column="2">
+                <Label Style="{StaticResource ClosedTapLabel}" Content="Payment and Delivery" />
+
+            </Border>
+            <Border Style="{StaticResource OpenTap}" Grid.Column="3">
+                <Label Style="{StaticResource OpenTapLabel}" Content="Additional Info" />
+
+            </Border>
+            <Border Style="{StaticResource ClosedTap}" Grid.Column="4">
+                <Label Style="{StaticResource ClosedTapLabel}" Content="Upload Files"/>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="140"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+            <WrapPanel Grid.Row="0">
+                <CheckBox HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0" x:Name="deadlineCheckBox" Click="OnCheckDealineCheckBox"/>
+                <Label Style="{StaticResource Labels}" Content="Drawing Submission Deadline" Margin="0,18,0,0" Width="210"/>
+                <TextBox Style="{StaticResource ComboBoxes}" Width="70" x:Name="minDeadlineTextBox"/>
+                <TextBox Style="{StaticResource ComboBoxes}" Width="70" Margin="15,18,0,0" x:Name="maxDeadlineTextBox"/>
+                <ComboBox Style="{StaticResource ComboBoxes}" Width="150" Margin="33,18,0,0" x:Name="deadlineTimeUnitComboBox"/>
+                <ComboBox Style="{StaticResource ComboBoxes}" Width="150" Margin="33,18,0,0" x:Name="deadlineTimeConditionComboBox"/>
+            </WrapPanel>
+            <WrapPanel Grid.Row="1" Height="70" Width="800" HorizontalAlignment="Left">
+                <CheckBox HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0" x:Name="warrantyPeriodCheckBox" Click="OnCheckWarrantyPeriodCheckBox"/>
+                <Label Style="{StaticResource Labels}" Content="Warranty Period"  Margin="0,18,0,0"  Width="210"/>
+                <TextBox Style="{StaticResource ComboBoxes}" Width="150" x:Name="warrantyPeriodTextBox"/>
+                <ComboBox Style="{StaticResource ComboBoxes}" Width="150" Margin="33,18,0,0" x:Name="warrantyTimeUnitComboBox" />
+                <ComboBox Style="{StaticResource ComboBoxes}" Width="150" Margin="33,18,0,0" x:Name="warrantyTimeConditionComboBox"/>
+            </WrapPanel>
+            <WrapPanel Grid.Row="2" Height="70" Width="800" HorizontalAlignment="Left">
+                <Label Style="{StaticResource Labels}" Content="Validity Period" Width="210"/>
+                <TextBox Style="{StaticResource ComboBoxes}" Width="150" x:Name="ValidtyPeriodTextBox"/>
+                <ComboBox Style="{StaticResource ComboBoxes}" Width="150" Margin="33,18,0,0" x:Name="validtyPeriodComboBox"/>
+            </WrapPanel>
+            <WrapPanel Grid.Row="3">
+                <Label Style="{StaticResource Labels}" Content="Additional Description" Width="210"/>
+                <TextBox Style="{StaticResource Comments}"  x:Name="additionalDescriptionTextBox"/>
+            </WrapPanel>
+            <WrapPanel Grid.Row="4">
+                <Label Style="{StaticResource Labels}" Content="Remaining Characters: " Width="162" Margin="350,0,0,0"/>
+                <Label Style="{StaticResource Labels}" Content="Num" Margin="0,0,0,0"/>
+            </WrapPanel>
+        </Grid>
+        <WrapPanel Width="450" Grid.Row="3">
+
+        </WrapPanel>
+        <WrapPanel Width="850" Margin="0,0,0,20" Grid.Row="3">
+            <Button Style="{StaticResource Buttons}" Content="Back"  />
+            <Button Style="{StaticResource Buttons}" Content="Next"  />
+            <Button Style="{StaticResource Buttons}" Content="Finish" Click="OnBtnClickFinish"/>
+            <Button Style="{StaticResource Buttons}" Content="Cancel" />
+        </WrapPanel>
+    </Grid>
+</Page>

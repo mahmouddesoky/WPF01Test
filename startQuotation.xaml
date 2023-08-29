@@ -1,0 +1,86 @@
+﻿<Page x:Class="WpfApp1.startQuotation"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="1000"
+      Title="startQuotation">
+
+    <Grid MinWidth="1000">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Background="#105A97" >
+            <Label Content="Work Orders" Style="{StaticResource ClosedTapLabel2}" MouseDoubleClick="OnBtnClickWorkOrder"/>
+            <Label Content="Quotations" Style="{StaticResource OpenTapLabel2}"/>
+            <Label Content="RFQs" Style="{StaticResource ClosedTapLabel2}" MouseDoubleClick="OnBtnClickRFQ"/>
+
+        </StackPanel>
+        <Grid Grid.Column="1" Background="#E6E6E3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="340"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Quotations" Style="{StaticResource Header}" Grid.Row="0"/>
+            <WrapPanel Grid.Row="1">
+                <CheckBox Content="Search" Style="{StaticResource checkbox}" x:Name="searchCheckBox" Click="searchCheckBox_Click" />
+                <TextBox Style="{StaticResource ComboBoxe}" x:Name="searchTextBox"/>
+            </WrapPanel>
+            <WrapPanel Grid.Row="2">
+                <CheckBox Content="Year" Style="{StaticResource checkbox}" x:Name="yearCheckBox" />
+                <ComboBox Style="{StaticResource ComboBoxe}" x:Name="yearComboBox"/>
+            </WrapPanel>
+            <WrapPanel Grid.Row="3">
+                <CheckBox Content="Quarter" Style="{StaticResource checkbox}" x:Name="quarterCheckBox" Click="quarterCheckBox_Click"/>
+                <ComboBox Style="{StaticResource ComboBoxe}" x:Name="quarterComboBox"/>
+            </WrapPanel>
+            <WrapPanel Grid.Row="4">
+                <CheckBox Content="Sales Person" Style="{StaticResource checkbox}" x:Name="salesPersonCheckBox" Click="salesPersonCheckBox_Click"/>
+                <ComboBox Style="{StaticResource ComboBoxe}" x:Name="salesPersonComboBox"/>
+            </WrapPanel>
+            <WrapPanel Grid.Row="5">
+                <CheckBox Content="Pre-Sales Engineer" Style="{StaticResource checkbox}" x:Name="preSalesEngineerCheckBox" Click="preSalesEngineerCheckBox_Click"/>
+                <ComboBox Style="{StaticResource ComboBoxe}" x:Name="preSalesComboBox"/>
+            </WrapPanel>
+            <WrapPanel Grid.Row="6">
+                <CheckBox Content="Product" Style="{StaticResource checkbox}" x:Name="productCheckBox" Click="productCheckBox_Click"/>
+                <ComboBox Style="{StaticResource ComboBoxe}" x:Name="productComboBox"/>
+            </WrapPanel>
+            <WrapPanel Grid.Row="7">
+                <CheckBox Content="Brand" Style="{StaticResource checkbox}" x:Name="brandCheckBox" Click="brandCheckBox_Click"/>
+                <ComboBox Style="{StaticResource ComboBoxe}" x:Name="brandComboBox"/>
+            </WrapPanel>
+            <WrapPanel Grid.Row="8">
+                <CheckBox Content="Contract Type" Style="{StaticResource checkbox}" x:Name="contractTypeCheckBox" Click="contractTypeCheckBox_Click"/>
+                <ComboBox Style="{StaticResource ComboBoxe}" x:Name="contractTypeComboBox"/>
+            </WrapPanel>
+            <WrapPanel Grid.Row="9">
+                <CheckBox Content="Status" Style="{StaticResource checkbox}" x:Name="statusCheckBox" Click="statusCheckBox_Click"/>
+                <ComboBox Style="{StaticResource ComboBoxe}" x:Name="statusComboBox"/>
+            </WrapPanel>
+            <ScrollViewer Grid.Row="1" Grid.Column="2" Grid.RowSpan="9" Margin="0,0,10,0">
+                <StackPanel  Style="{StaticResource grid}" x:Name="quotationStackPanel">
+
+                </StackPanel>
+            </ScrollViewer>
+
+            <Button Content="ADD" Style="{StaticResource Button}" Grid.Row="10" Click="Button_Click" x:Name="addButton"/>
+        </Grid>
+    </Grid>
+</Page>

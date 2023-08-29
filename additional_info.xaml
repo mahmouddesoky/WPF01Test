@@ -1,0 +1,91 @@
+﻿<Page x:Class="WpfApp1.additional_info"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1200"
+      Title="additional_info">
+
+    <Grid VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Height="100" Background="#105A97" Grid.Row="0">
+            <Label Style="{StaticResource AppHeaderStyle}"  Content="RFQ ADDITIONAL INFO" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <Border Style="{StaticResource ClosedTap}" Grid.Column="0">
+                <Label Style="{StaticResource ClosedTapLabel}" Content="Basic Info" MouseDoubleClick="Label_MouseDoubleClick"/>
+            </Border>
+            <Border Style="{StaticResource ClosedTap}" Grid.Column="1">
+                <Label Style="{StaticResource ClosedTapLabel}" Content="Products Info" MouseDoubleClick="Label_MouseDoubleClick_1"/>
+
+            </Border>
+            <Border Style="{StaticResource OpenTap}" Grid.Column="2">
+                <Label Style="{StaticResource OpenTapLabel}" Content="Additional Info" MouseDoubleClick="Label_MouseDoubleClick_2"/>
+
+            </Border>
+            <Border Style="{StaticResource ClosedTap}" Grid.Column="3">
+                <Label Style="{StaticResource ClosedTapLabel}" Content="Upload Files" MouseDoubleClick="Label_MouseDoubleClick_3"/>
+
+            </Border>
+        </Grid>
+        <Grid Grid.Row="2" VerticalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <WrapPanel Grid.Row="0">
+                    <Label Style="{StaticResource Labels}" Content="Contract Type"/>
+                    <ComboBox Style="{StaticResource ComboBoxes}" x:Name="contractTypeComboBox" SelectionChanged="contractTypeComboBox_SelectionChanged"/>
+                </WrapPanel>
+                <WrapPanel Grid.Row="1">
+                    <Label Style="{StaticResource Labels}" Content="Deadline Date"/>
+                    <DatePicker Style="{StaticResource datePicker}" x:Name="deadLineTextBox" SelectedDateChanged="deadLineTextBox_SelectedDateChanged"/>
+                </WrapPanel>
+                <WrapPanel Grid.Row="2">
+                    <Label Style="{StaticResource Labels}" Content="Notes"/>
+                    <TextBox Style="{StaticResource Comments}" x:Name="notesTextBox" TextChanged="notesTextBox_TextChanged" />
+                </WrapPanel>
+                <WrapPanel Grid.Row="3">
+                    <Label Style="{StaticResource Labels}" Content="Remaining Characters: " Width="162" Margin="350,0,0,0"/>
+                    <Label Style="{StaticResource Labels}" Content="Num" Margin="0,0,0,0" x:Name="remainingCharactersLabel"/>
+                </WrapPanel>
+
+
+            </Grid>
+            <Grid Grid.Row="3" VerticalAlignment="Stretch">
+            <WrapPanel VerticalAlignment ="Stretch" HorizontalAlignment="Stretch" >
+                <WrapPanel Width="350" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+
+                </WrapPanel>
+                <WrapPanel Width="850" VerticalAlignment="Stretch">
+                    <Button Style="{StaticResource Buttons}" Content="Back"  />
+                    <Button Style="{StaticResource Buttons}" Content="Next" Click="Button_Click" />
+                    <Button Style="{StaticResource Buttons}" Content="Finish"  Click="Button_Click_1"/>
+                    <Button Style="{StaticResource Buttons}" Content="Cancel" />
+                </WrapPanel>
+
+            </WrapPanel>
+            </Grid>
+        </Grid>
+        
+    </Grid>
+</Page>

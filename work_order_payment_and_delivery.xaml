@@ -1,0 +1,112 @@
+﻿<Page x:Class="WpfApp1.work_order_payment_and_delivery"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1800"
+      Title="work_order_payment_and_delivery">
+
+    <Grid VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+
+        </Grid.RowDefinitions>
+        <Grid Height="100" Background="#105A97" Grid.Row="0">
+            <Label Style="{StaticResource AppHeaderStyle}"  Content="PAYMENT AND DELIVERY" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <Border Style="{StaticResource ClosedTap}" Grid.Column="0">
+                <Label Style="{StaticResource ClosedTapLabel}" Content="Basic Info"/>
+            </Border>
+            <Border Style="{StaticResource ClosedTap}" Grid.Column="1">
+                <Label Style="{StaticResource ClosedTapLabel}" Content="Projects Info" />
+
+            </Border>
+            <Border Style="{StaticResource ClosedTap}" Grid.Column="2">
+                <Label Style="{StaticResource ClosedTapLabel}" Content="Products Info" />
+
+            </Border>
+            <Border Style="{StaticResource OpenTap}" Grid.Column="3">
+                <Label Style="{StaticResource OpenTapLabel}" Content="Payment and Delivery" />
+
+            </Border>
+            <Border Style="{StaticResource ClosedTap}" Grid.Column="4">
+                <Label Style="{StaticResource ClosedTapLabel}" Content="Additional Info"/>
+            </Border>
+            <Border Style="{StaticResource ClosedTap}" Grid.Column="5">
+                <Label Style="{StaticResource ClosedTapLabel}" Content="Upload File"/>
+            </Border>
+        </Grid>
+        <ScrollViewer Grid.Row="2">
+
+
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                </Grid.RowDefinitions>
+                <WrapPanel Grid.Row="0" Height="70" Width="800" HorizontalAlignment="Left">
+                    <Label Style="{StaticResource Labels}" Content="Total Price"/>
+                    <TextBox Style="{StaticResource ComboBoxes}" Width="150" />
+                    <ComboBox Style="{StaticResource ComboBoxes}" Width="150" Margin="33,18,0,0" />
+                    <ComboBox Style="{StaticResource ComboBoxes}" Width="150" Margin="33,18,0,0" />
+                </WrapPanel>
+                <WrapPanel Grid.Row="1" Height="70" Width="800" HorizontalAlignment="Left">
+                    <TextBox Style="{StaticResource ComboBoxes}" Width="130" Margin="20,18,0,0"/>
+                    <Label Style="{StaticResource Labels}" Content="% Down Payment" Width="150" Margin="60,18,0,0" />
+                    <TextBox Style="{StaticResource ComboBoxes}" Width="150" Margin="30,18,0,0" />
+                </WrapPanel>
+                <WrapPanel Grid.Row="2" Height="70" Width="800" HorizontalAlignment="Left">
+                    <TextBox Style="{StaticResource ComboBoxes}" Width="130" Margin="20,18,0,0"/>
+                    <Label Style="{StaticResource Labels}" Content="% On Delivery" Width="150" Margin="60,18,0,0" />
+                    <TextBox Style="{StaticResource ComboBoxes}" Width="150" Margin="30,18,0,0" />
+                </WrapPanel>
+                <WrapPanel Grid.Row="3" Height="70" Width="800" HorizontalAlignment="Left">
+                    <TextBox Style="{StaticResource ComboBoxes}" Width="130" Margin="20,18,0,0"/>
+                    <Label Style="{StaticResource Labels}" Content="% On Installation" Width="150" Margin="60,18,0,0" />
+                    <TextBox Style="{StaticResource ComboBoxes}" Width="150" Margin="30,18,0,0"  />
+                </WrapPanel>
+                <WrapPanel Grid.Row="4">
+                    <CheckBox HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    <Label Style="{StaticResource Labels}" Content="Delivery Time" Margin="0,18,0,0"/>
+                    <TextBox Style="{StaticResource ComboBoxes}" Width="70" />
+                    <TextBox Style="{StaticResource ComboBoxes}" Width="70" Margin="15,18,0,0"/>
+                    <ComboBox Style="{StaticResource ComboBoxes}" Width="150" Margin="33,18,0,0" />
+                    <ComboBox Style="{StaticResource ComboBoxes}" Width="150" Margin="33,18,0,0" />
+                </WrapPanel>
+                <WrapPanel Grid.Row="5" Height="70" Width="600" HorizontalAlignment="Left">
+                    <CheckBox HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    <Label Style="{StaticResource Labels}" Content="Delivery Point" Margin="0,18,0,0"/>
+                    <ComboBox Style="{StaticResource ComboBoxes}" />
+                </WrapPanel>
+            </Grid>
+        </ScrollViewer>
+        <WrapPanel Width="450" Grid.Row="3">
+
+        </WrapPanel>
+        <WrapPanel Width="850" Margin="0,0,0,20" Grid.Row="3">
+            <Button Style="{StaticResource Buttons}" Content="Back"  />
+            <Button Style="{StaticResource Buttons}" Content="Next"  />
+            <Button Style="{StaticResource Buttons}" Content="Finish" />
+            <Button Style="{StaticResource Buttons}" Content="Cancel" />
+        </WrapPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,245 @@
+﻿<Application x:Class="WpfApp1.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfApp1"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="HeaderStyle">
+            <Setter Property="Label.VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Label.FontFamily" Value="Lucida Bright"></Setter>
+            <Setter Property="Label.FontSize" Value="40"></Setter>
+            <Setter Property="Label.Foreground" Value="#105A97"></Setter>
+            <Setter Property="Label.FontWeight" Value="Bold"></Setter>
+            <Setter Property="Label.Margin" Value="100,22,0,0"></Setter>
+        
+        </Style>
+        <Style x:Key="BasicLabel">
+            <Setter Property="Label.VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Label.FontFamily" Value="Lucida Bright"></Setter>
+            <Setter Property="Label.FontSize" Value="20"></Setter>
+            <Setter Property="Label.Foreground" Value="#105A97"></Setter>
+            <Setter Property="Label.FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style x:Key="SignUpButton">
+            <Setter Property="Button.Background" Value="#105A97"></Setter>
+            <Setter Property="Button.Foreground" Value="White"></Setter>
+            <Setter Property="Button.FontFamily" Value="Bahnschrift SemiBold"></Setter>
+            <Setter Property="Button.FontSize" Value="15"></Setter>
+            <Setter Property="Button.Width" Value="80"></Setter>
+            <Setter Property="Button.Height" Value="50"></Setter>
+            <Setter Property="Button.VerticalAlignment" Value="center"></Setter>
+            <Setter Property="Button.Margin" Value="100,20,0,0"></Setter>
+            <Setter Property="Button.HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="Button.MinWidth" Value="100"></Setter>
+
+        </Style>
+        <Style x:Key="AppHeaderStyle">
+            <Setter Property="Label.VerticalAlignment" Value="top"></Setter>
+            <Setter Property="Label.FontFamily" Value="Bahnschrift SemiBold"></Setter>
+            <Setter Property="Label.FontSize" Value="30"></Setter>
+            <Setter Property="Label.Foreground" Value="White"></Setter>
+            <Setter Property="Label.Background" Value="#105A97"></Setter>
+            <Setter Property="Label.FontWeight" Value="Bold"></Setter>
+            <Setter Property="Label.Height" Value="100"></Setter>
+            <Setter Property="Label.Margin" Value="50,22,0,0"></Setter>
+        </Style>
+        <Style x:Key="ClosedTap">
+            <Setter Property="Border.Background" Value="#105A97"></Setter>
+            <Setter Property="Border.CornerRadius" Value="0,0,30,0"></Setter>
+
+        </Style>
+        
+        <Style x:Key="OpenTap">
+            <Setter Property="Border.Background" Value="#E6E6E3"></Setter>
+            <Setter Property="Border.CornerRadius" Value="0,0,30,0"></Setter>
+        </Style>
+        
+        <Style x:Key="OpenTapLabel">
+            <Setter Property="Label.VerticalAlignment" Value="center"></Setter>
+            <Setter Property="Label.FontFamily" Value="Bahnschrift SemiBold"></Setter>
+            <Setter Property="Label.FontSize" Value="15"></Setter>
+            <Setter Property="Label.Foreground" Value="#105A97"></Setter>
+            <Setter Property="Label.Background" Value="#E6E6E3"></Setter>
+            <Setter Property="Label.FontWeight" Value="Bold"></Setter>
+            <Setter Property="Label.Margin" Value="30,0,10,0"></Setter>
+
+        </Style>
+        
+        
+        <Style x:Key="ClosedTapLabel">
+            <Setter Property="Label.VerticalAlignment" Value="center"></Setter>
+            <Setter Property="Label.FontFamily" Value="Bahnschrift SemiBold"></Setter>
+            <Setter Property="Label.FontSize" Value="15"></Setter>
+            <Setter Property="Label.Foreground" Value="White"></Setter>
+            <Setter Property="Label.Background" Value="#105A97"></Setter>
+            <Setter Property="Label.FontWeight" Value="Bold"></Setter>
+            <Setter Property="Label.Margin" Value="30,0,10,0"></Setter>
+
+        </Style>
+
+        <Style x:Key="Labels">
+            <Setter Property="Label.VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Label.FontFamily" Value="Bahnschrift SemiBold"></Setter>
+            <Setter Property="Label.FontSize" Value="15"></Setter>
+            <Setter Property="Label.Foreground" Value="#105A97"></Setter>
+            <Setter Property="Label.FontWeight" Value="Bold"></Setter>
+            <Setter Property="Label.Margin" Value="20,20,10,0"></Setter>
+            <Setter Property="Label.Width" Value="173"></Setter>
+            <Setter Property="Label.Height" Value="40"></Setter>
+        </Style>
+
+        <Style x:Key="ComboBoxes">
+            <Setter Property="ComboBox.Height" Value="30"></Setter>
+            <Setter Property="ComboBox.Width" Value="332"></Setter>
+            <Setter Property="ComboBox.Margin" Value="0,20,0,0"></Setter>
+        </Style>
+
+        <Style x:Key="Buttons">
+            <Setter Property="Button.Background" Value="#105A97"></Setter>
+            <Setter Property="Button.Foreground" Value="White"></Setter>
+            <Setter Property="Button.FontFamily" Value="Bahnschrift SemiBold"></Setter>
+            <Setter Property="Button.FontSize" Value="15"></Setter>
+            <Setter Property="Button.Width" Value="200"></Setter>
+            <Setter Property="Button.Height" Value="50"></Setter>
+            <Setter Property="Button.VerticalAlignment" Value="center"></Setter>
+            <Setter Property="Button.Margin" Value="10,0,0,0"></Setter>
+
+        </Style>
+        <Style x:Key="InnerHeader">
+            <Setter Property="Label.VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Label.FontFamily" Value="Bahnschrift SemiBold"></Setter>
+            <Setter Property="Label.FontSize" Value="20"></Setter>
+            <Setter Property="Label.Foreground" Value="White"></Setter>
+            <Setter Property="Label.Background" Value="#105A97"></Setter>
+            <Setter Property="Label.FontWeight" Value="Bold"></Setter>
+            <Setter Property="Label.Margin" Value="60,0,0,0"></Setter>
+            <Setter Property="Label.Width" Value="173"></Setter>
+            <Setter Property="Label.Height" Value="40"></Setter>
+            <Setter Property="Label.FontWeight" Value="Bold"></Setter>
+        </Style>
+
+        <Style x:Key="Comments">
+            <Setter Property="TextBox.Height" Value="109"></Setter>
+            <Setter Property="TextBox.Width" Value="332"></Setter>
+            <Setter Property="TextBox.Margin" Value="0,20,0,0"></Setter>
+        </Style>
+
+        <Style x:Key="ClosedTapLabel2">
+            <Setter Property="Label.VerticalAlignment" Value="center"></Setter>
+            <Setter Property="Label.FontFamily" Value="Bahnschrift SemiBold"></Setter>
+            <Setter Property="Label.FontSize" Value="20"></Setter>
+            <Setter Property="Label.Foreground" Value="White"></Setter>
+            <Setter Property="Label.Background" Value="#105A97"></Setter>
+            <Setter Property="Label.Margin" Value="0,0,10,30"></Setter>
+            <Setter Property="Label.Width" Value="200"></Setter>
+            <Setter Property="Label.Height" Value="120"></Setter>
+            <Setter Property="Label.Padding" Value="20,20,0,0"></Setter>
+        </Style>
+        <Style x:Key="OpenTapLabel2">
+            <Setter Property="Label.VerticalAlignment" Value="center"></Setter>
+            <Setter Property="Label.FontFamily" Value="Bahnschrift SemiBold"></Setter>
+            <Setter Property="Label.FontSize" Value="20"></Setter>
+            <Setter Property="Label.Foreground" Value="#105A97"></Setter>
+            <Setter Property="Label.Background" Value="#E6E6E3"></Setter>
+            <Setter Property="Label.Margin" Value="0,0,0,0"></Setter>
+            <Setter Property="Label.Width" Value="200"></Setter>
+            <Setter Property="Label.Height" Value="120"></Setter>
+            <Setter Property="Label.Padding" Value="20,20,0,0"></Setter>
+        </Style>
+        <Style x:Key="Header">
+            <Setter Property="Label.VerticalAlignment" Value="Top"></Setter>
+            <Setter Property="Label.HorizontalAlignment" Value="Left"></Setter>
+            <Setter Property="Label.FontFamily" Value="Bahnschrift SemiBold"></Setter>
+            <Setter Property="Label.FontSize" Value="50"></Setter>
+            <Setter Property="Label.Foreground" Value="#105A97"></Setter>
+            <Setter Property="Label.Background" Value="#E6E6E3"></Setter>
+            <Setter Property="Label.Margin" Value="0,10,0,0"></Setter>
+            <Setter Property="Label.Width" Value="310"></Setter>
+            <Setter Property="Label.Height" Value="80"></Setter>
+            <Setter Property="Label.Padding" Value="20,20,0,0"></Setter>
+        </Style>
+        <Style x:Key="checkbox">
+            <Setter Property="Label.VerticalAlignment" Value="center"></Setter>
+            <Setter Property="Label.FontFamily" Value="Bahnschrift SemiBold"></Setter>
+            <Setter Property="Label.FontSize" Value="15"></Setter>
+            <Setter Property="Label.Foreground" Value="#105A97"></Setter>
+            <Setter Property="Label.Margin" Value="10,10,0,0"></Setter>
+            <Setter Property="Label.Width" Value="160"></Setter>
+            <Setter Property="Label.Height" Value="20"></Setter>
+           
+        </Style>
+        <Style x:Key="ComboBoxe">
+            <Setter Property="ComboBox.Height" Value="20"></Setter>
+            <Setter Property="ComboBox.Width" Value="100"></Setter>
+            <Setter Property="ComboBox.Margin" Value="0,10,0,0"></Setter>
+        </Style>
+        <Style x:Key="grid">
+            <Setter Property="Grid.Margin" Value="0,0,0,0"></Setter>
+            <Setter Property="Grid.Background" Value="White"></Setter>
+
+        </Style>
+        <Style x:Key="Button">
+            <Setter Property="Button.Background" Value="#105A97"></Setter>
+            <Setter Property="Button.Foreground" Value="White"></Setter>
+            <Setter Property="Button.FontFamily" Value="Bahnschrift SemiBold"></Setter>
+            <Setter Property="Button.FontSize" Value="15"></Setter>
+            <Setter Property="Button.Width" Value="150"></Setter>
+            <Setter Property="Button.MinHeight" Value="50"></Setter>
+            <Setter Property="Button.VerticalAlignment" Value="center"></Setter>
+            <Setter Property="Button.Margin" Value="10,50,0,0"></Setter>
+            <Setter Property="Button.HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="Button.MinWidth" Value="150"></Setter>
+
+        </Style>
+        <Style x:Key="FilterationLabel">
+            <Setter Property="Label.VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Label.FontFamily" Value="Bahnschrift SemiBold"></Setter>
+            <Setter Property="Label.FontSize" Value="20"></Setter>
+            <Setter Property="Label.Foreground" Value="#105A97"></Setter>
+            <Setter Property="Label.FontWeight" Value="Bold"></Setter>
+            <Setter Property="Label.Margin" Value="10,0,0,0"></Setter>
+        </Style>
+        <Style x:Key="SubTitles">
+            <Setter Property="Label.VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Label.FontFamily" Value="Bahnschrift SemiBold"></Setter>
+            <Setter Property="Label.FontSize" Value="15"></Setter>
+            <Setter Property="Label.Foreground" Value="#105A97"></Setter>
+            <Setter Property="Label.Margin" Value="20,0,0,0"></Setter>
+        </Style>
+        <Style x:Key="SubTitles1">
+            <Setter Property="Label.VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Label.FontFamily" Value="Bahnschrift SemiBold"></Setter>
+            <Setter Property="Label.FontSize" Value="15"></Setter>
+            <Setter Property="Label.Foreground" Value="White"></Setter>
+            <Setter Property="Label.Margin" Value="20,0,0,0"></Setter>
+        </Style>
+
+        <Style x:Key="datePicker">
+            <Setter Property="DatePicker.Height" Value="30"></Setter>
+            <Setter Property="DatePicker.Width" Value="332"></Setter>
+            <Setter Property="DatePicker.Margin" Value="0,20,0,0"></Setter>
+            <Setter Property="DatePicker.Focusable" Value="False"></Setter>
+        </Style>
+        <Style x:Key="Button1">
+            <Setter Property="Button.Background" Value="White"></Setter>
+            <Setter Property="Button.Foreground" Value="#105A97"></Setter>
+            <Setter Property="Button.FontFamily" Value="Bahnschrift SemiBold"></Setter>
+            <Setter Property="Button.FontSize" Value="13"></Setter>
+            <Setter Property="Button.VerticalAlignment" Value="center"></Setter>
+            <Setter Property="Button.HorizontalAlignment" Value="left"></Setter>
+            <Setter Property="Button.BorderThickness" Value="0"></Setter>
+        </Style>
+        <Style x:Key="expander">
+            <Setter Property="Expander.Margin" Value="10,10,0,0"></Setter>
+            
+        </Style>
+
+        <Style x:Key="status">
+            <Setter Property="Border.CornerRadius" Value="25,25,25,25"></Setter>
+            <Setter Property="Border.Background" Value="#FFA500"></Setter>
+            <Setter Property="Border.Margin" Value="20,10,0,0"></Setter>
+            <Setter Property="Border.Width" Value="100"></Setter>
+            <Setter Property="Border.BorderThickness" Value="1,1,1,1"></Setter>
+        </Style>
+    </Application.Resources>
+</Application>
